@@ -1,0 +1,1 @@
+export { SimpleAnimatedModal } from './SimpleAnimatedModal';

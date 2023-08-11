@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# React: The dialog HTML element `<dialog>` us Portal `ReactDom.createPortal(child, container, ?key)`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The `<dialog>` HTML tag
 
-## Available Scripts
+In this chapter `<dialog>` is considered for a dialog box representaion only. The `<dialog>` can use for other interactive components such as a dismissible allert, inspectors, or subwindows (see [mdn-web-docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog))
 
-In the project directory, you can run:
+### Attributes
 
-### `npm start`
+`global attributes`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[!WARNING]
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> The `tabindex` attribute have not be used (see [mdn-web-docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#attributes))
 
-### `npm test`
+`open` - attribute
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If `open` attribute is present, then the `<dialog>` is active and can be interactive.
 
-### `npm run build`
+```
+<dialog open>
+    <h2>Dialog header</h2>
+    <form method="dialog">
+        <button type="submit"> Submit </button>
+    </form>
+</dialog>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+With the attribute `open` the `<dialog>` is rendered as a non-modal component. Instead the `open` attribute we have to use a `.showModal()` method to render a modal window.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### The `<modal>` with `.showModal()` method
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As [MSDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#accessibility_considerations) writes: "The native HTML `<dialog>` element should be used in creating modal dialogs as it provides usability and accessibility features that must be replicated if using other elements for a similar purpose."
 
-### `npm run eject`
+A focus is set on the first nested focusable element up after using the `HTMLDialogElement.showModal()` method to create a `<dialog>`. A developer can use an `autofocus` attribute to ensure the focus sets on an element the developer need.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To implicit close `<modal>` the developer have to add a "close" or a "cancel"
+button and use `HTMLDialogElement.close(?returnedValue)`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> :Buttons
+>
+> > :Button label=Git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
