@@ -1,3 +1,9 @@
+<style>
+    .btn{
+        color:red;
+    }
+</style>
+
 # React: The dialog HTML element `<dialog>` us Portal `ReactDom.createPortal(child, container, ?key)`
 
 ## The `<dialog>` HTML tag
@@ -36,5 +42,7 @@ A focus is set on the first nested focusable element up after using the `HTMLDia
 To implicit close `<modal>` the developer have to add a "close" or a "cancel"
 button and use `HTMLDialogElement.close(?returnedValue)`.
 
-<span style="background-color:grey"> Click Here </span>
+<kbd>CTRL</kbd>+<kbd>Z</kbd>
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=DenverCoder1)]
 
