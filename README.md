@@ -36,7 +36,5 @@ A focus is set on the first nested focusable element up after using the `HTMLDia
 To implicit close `<modal>` the developer have to add a "close" or a "cancel"
 button and use `HTMLDialogElement.close(?returnedValue)`.
 
-> :Buttons
->
-> > :Button label=Git
+<button>Hello</button>
 
