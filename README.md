@@ -36,5 +36,5 @@ A focus is set on the first nested focusable element up after using the `HTMLDia
 To implicit close `<modal>` the developer have to add a "close" or a "cancel"
 button and use `HTMLDialogElement.close(?returnedValue)`.
 
-<button style="background-color: grey">Hello</button>
+<button style="background-color: grey; cursor: pointer ">Hello</button>
 
